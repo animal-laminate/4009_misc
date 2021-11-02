@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Location Tracker</title>
+</head>
+<body>
+    <table width="100%" border="0">
+    <tbody>
+        <tr style="font-size:40px;">
+            <td style="font-family:Arial; text-align:center">Location Tracker</td>
+        </tr>
+    </tbody>
+    </table>
+  
+    <table width="100%" border="0">
+    <tbody>
+        <tr style="font-size:16px; font-family:Arial; text-align:center">
+            <th><a href='points-and-lines.html'>Longitude</a></th>
+            <th>Latitude</th> 
+            <th>Report Time</th>
+            <th>Date</th>
+            <th>Time</th> 
+        </tr>
+        {% for item in locations %}
+        <tr>
+            <td style="font-size:12px;font-family:Arial; text-align:left"; width="25%">{{ item[0] }}</td>
+	        <td style="font-size:12px;font-family:Arial; text-align:left"; width="25%">{{ item[1] }}</td>
+            <td style="font-size:12px;font-family:Arial; text-align:left"; width="25%">{{ item[2] }}</td>
+            <td style="font-size:12px;font-family:Arial; text-align:left"; width="25%">{{ item[3] }}</td>
+            <td style="font-size:12px;font-family:Arial; text-align:left"; width="25%">{{ item[4] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
